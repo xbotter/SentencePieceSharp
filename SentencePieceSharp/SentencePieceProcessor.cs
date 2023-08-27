@@ -4,11 +4,11 @@ using System.Text;
 using SentencePieceNative;
 namespace SentencePieceSharp
 {
-    public sealed class SentencePieceProcess : IDisposable
+    public sealed class SentencePieceProcessor : IDisposable
     {
         private SentencePieceWrapper _wrapper;
 
-        public SentencePieceProcess(string modelPath)
+        public SentencePieceProcessor(string modelPath)
         {
             this._wrapper = new SentencePieceWrapper(modelPath);
         }

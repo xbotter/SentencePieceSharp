@@ -2,18 +2,18 @@
 
 using SentencePieceSharp;
 
-var modelFile = "D:/GitHub/SentencePieceSharp/model/tokenizer.model";
+var modelFile = Path.Combine(Directory.GetCurrentDirectory(), "../../../../model/tokenizer.model");
 if (File.Exists(modelFile))
 {
-    var process = new SentencePieceProcess(modelFile);
+    var processor = new SentencePieceProcessor(modelFile);
 
-    var encoding = process.Encode("Hello World");
+    var encoded = processor.Encode("Hello World");
 
-    Console.WriteLine(string.Join(",",encoding));
+    Console.WriteLine(string.Join(",", encoded));
 }
 else
 {
-    Console.WriteLine("File Not Exists");
+    Console.WriteLine($"File {modelFile} Not Exists");
 }
 
 Console.ReadLine();
