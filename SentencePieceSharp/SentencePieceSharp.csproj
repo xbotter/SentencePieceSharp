@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <LangVersion>10</LangVersion>
+
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Memory" Version="4.5.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="native\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SentencePieceWrap\SentencePieceWrap.vcxproj" />
+  </ItemGroup>
+
+</Project>
