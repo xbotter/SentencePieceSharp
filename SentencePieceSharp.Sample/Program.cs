@@ -1,15 +1,14 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 using SentencePieceSharp;
+using SentencePieceSharp.Sample;
 
 var modelFile = Path.Combine(Directory.GetCurrentDirectory(), "../../../../model/tokenizer.model");
 if (File.Exists(modelFile))
 {
-    var processor = new SentencePieceProcessor(modelFile);
+    var tokenizer = new Tokenizer(modelFile);
 
-    var encoded = processor.Encode("Hello World");
-
-    Console.WriteLine(string.Join(",", encoded));
+    Console.WriteLine(string.Join(",", tokenizer.Encode("Hello World")));
 }
 else
 {
