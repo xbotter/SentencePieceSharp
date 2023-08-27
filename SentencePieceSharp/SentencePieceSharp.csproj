@@ -14,10 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="native\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\SentencePieceWrap\SentencePieceWrap.vcxproj" />
   </ItemGroup>
 
